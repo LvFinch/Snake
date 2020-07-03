@@ -153,6 +153,7 @@ void CSnakeView::OnTimer(UINT nIDEvent)
 
 	if(gameStart == 1)  //游戏处于运行状态
 	{
+		//sndPlaySound("res\\bg.wav", SND_ASYNC|SND_LOOP);
 		b.x = a[0].x;
 		b.y = a[0].y;
 
@@ -184,7 +185,6 @@ void CSnakeView::OnTimer(UINT nIDEvent)
 		//第1个节点的变化
 		a[1].x = b.x;
 		a[1].y = b.y;
-		
 
 		CBrush head(RGB(255, 0, 0));  //将蛇的头节点设置成红色
 		hDC.SelectObject(head);
@@ -349,7 +349,8 @@ void CSnakeView::Initialize()
 	a[2].x = 160;
 	a[2].y = 170;
 	a[3].x = 150;
-	a[3].y = 170;	
+	a[3].y = 170;
+	sndPlaySound("res\\go.wav", SND_SYNC);
 }
 
 void CSnakeView::OnPause() 
@@ -360,11 +361,13 @@ void CSnakeView::OnPause()
 		// 暂停游戏
 		pauseOrContinue = 0;
 		KillTimer(1);
+		sndPlaySound("res\\pause.wav", SND_PURGE|SND_NOSTOP);
 	}
 	else if(pauseOrContinue == 0)
 	{
 		// 继续游戏
 		pauseOrContinue = 1;
 		OnTimer(1);
+		sndPlaySound("res\\pause.wav", SND_ASYNC|SND_NOSTOP);
 	}
 }
