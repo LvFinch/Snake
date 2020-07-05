@@ -325,11 +325,13 @@ void CSnakeView::AliveOrDie()
 		if(a[0].x==a[i].x && a[0].y==a[i].y)
 		{
 			gameStart=0;
+			//sndPlaySound("res\\dead.wav", SND_SYNC);
 		}
 		//蛇的头节点碰到边界
 		else if(a[0].x<100 || a[0].x>500 || a[0].y<100 || a[0].y>500)
 		{
 			gameStart=0;
+			//sndPlaySound("res\\dead.wav", SND_SYNC);
 		}		
 	}
 }
