@@ -6,14 +6,13 @@
 --------------------Configuration: Snake - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/Snake.res" /d "_DEBUG" /d "_AFXDLL" "E:\Github\Self\Snake\Snake.rc"" 
-Creating temporary file "C:\Users\Akko\AppData\Local\Temp\RSPA29F.tmp" with contents
+Creating temporary file "C:\Users\Akko\AppData\Local\Temp\RSP4B3F.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Snake.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "E:\Github\Self\Snake\SnakeView.cpp"
 ]
-Creating command line "cl.exe @C:\Users\Akko\AppData\Local\Temp\RSPA29F.tmp" 
-Creating temporary file "C:\Users\Akko\AppData\Local\Temp\RSPA2A0.tmp" with contents
+Creating command line "cl.exe @C:\Users\Akko\AppData\Local\Temp\RSP4B3F.tmp" 
+Creating temporary file "C:\Users\Akko\AppData\Local\Temp\RSP4B40.tmp" with contents
 [
 winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Snake.pdb" /debug /machine:I386 /out:"Debug/Snake.exe" /pdbtype:sept 
 .\Debug\MainFrm.obj
@@ -23,9 +22,8 @@ winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Snake.pdb" /de
 .\Debug\StdAfx.obj
 .\Debug\Snake.res
 ]
-Creating command line "link.exe @C:\Users\Akko\AppData\Local\Temp\RSPA2A0.tmp"
+Creating command line "link.exe @C:\Users\Akko\AppData\Local\Temp\RSP4B40.tmp"
 <h3>Output Window</h3>
-Compiling resources...
 Compiling...
 SnakeView.cpp
 Linking...

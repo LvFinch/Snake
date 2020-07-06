@@ -131,8 +131,12 @@ void CSnakeView::OnTimer(UINT nIDEvent)
 	NameId.Format("20184067颜廷伟");
 	AliveOrDie();
 
-	CString hit;
-	hit.Format("点击状态栏→开始←以开始游戏");
+	CString hit1;
+	hit1.Format("点击状态栏→开始←以开始游戏");
+	AliveOrDie();
+
+	CString hit2;
+	hit2.Format("键盘↑←↓→控制，长按可加速");
 	AliveOrDie();
 	
 	//创建设备描述表
@@ -144,10 +148,11 @@ void CSnakeView::OnTimer(UINT nIDEvent)
 	pOldBitmap = hDC.SelectObject(&hBitmap);
 
 	hDC.FillSolidRect(0, 0, 1000, 1000, RGB(134,176,237)); //设定白色区域范围
-	hDC.TextOut(105, 525, score);  //在坐标(500,200)处输出游戏分数
-	hDC.TextOut(265, 30, title);   //在坐标(200,200)处输出标题
-	hDC.TextOut(390, 525, NameId);  //在坐标(200,200)处输出姓名学号
-	hDC.TextOut(200, 69, hit);	   //在坐标(200,69)处输出提示
+	hDC.TextOut(105, 525, score);  //在坐标(105, 525)处输出游戏分数
+	hDC.TextOut(265, 20, title);   //在坐标(265, 20)处输出标题
+	hDC.TextOut(390, 525, NameId);  //在坐标(390, 525)处输出姓名学号
+	hDC.TextOut(200, 50, hit1);	   //在坐标(200,50)处输出提示1
+	hDC.TextOut(200, 70, hit2);	   //在坐标(200,70)处输出提示2
 	hDC.Rectangle(CRect(90, 90, 520, 520)); //设定外矩形框
 	hDC.Rectangle(CRect(100, 100, 510, 510)); //设定内矩形框
 
